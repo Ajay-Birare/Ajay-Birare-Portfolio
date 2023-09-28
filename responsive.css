@@ -1,0 +1,288 @@
+@media screen and (max-width: 768px) {
+  .navbar .right {
+    position: absolute;
+    top: 100px;
+    right: 0;
+
+    display: none;
+    border: 1px solid rgba(232, 215, 232, 0.667);
+  }
+  .navbar .right.show {
+    display: block;
+    top: 100px;
+    height: 100vh;
+    background-color: rgb(196, 176, 251);
+  }
+
+  .navbar .right a:hover {
+    background-color: var(--primaryColor);
+    color: white;
+  }
+  .navbar .right a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    text-align: center;
+    border-bottom: 1px solid rgba(105, 100, 105, 0.667);
+    padding: 3%;
+    transition: all 0.3s;
+
+    /* background-color: rgb(198, 191, 245); */
+  }
+  .menu {
+    display: block;
+  }
+  .menuImg {
+    content: url("images/asset\ 27.svg");
+  }
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile .img img {
+    height: 280px;
+    width: 280px;
+  }
+  .profile .div2 h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .socialLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .profile .resume {
+    margin: 0 20%;
+  }
+  .about :first-child {
+    margin-top: 0;
+  }
+  .about {
+    /* margin-top: 200px; */
+    height: 100vh;
+    flex-direction: column;
+  }
+  .about .para {
+    width: 100%;
+  }
+  .about .para p {
+    opacity: 0.6;
+  }
+  .skills {
+    gap: 50px;
+  }
+  .skillFlex {
+    width: 90%;
+  }
+  .skills .skillFlex img {
+    height: 60px;
+  }
+  .projects {
+    height: 100vh;
+  }
+  .flip-card {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  iframe {
+    box-shadow: 1px 1px 10px 5px rgb(141, 117, 117);
+    height: 100%;
+    width: 100%;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .education .educationsteps {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .education .educationsteps img {
+    height: 100px;
+  }
+  .education .educationsteps div {
+    text-align: center;
+
+    width: 35vw;
+    height: 35vh;
+    background-color: #9ccff0;
+    /* padding: 10%; */
+  }
+
+  .navbar .right a {
+    transition: all 0.8s;
+  }
+  .navbar .right a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--primaryColor);
+    color: white;
+    z-index: -2222;
+    left: 0;
+    transition: all 0.8s;
+
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* .navbar .right {
+
+    position: absolute;
+    top: 100px;
+    right: 0;
+
+    display: none;
+    border: 1px solid rgba(88, 82, 88, 0.667);
+  }
+  .navbar .right.show {
+    display: block;
+  }
+
+  .navbar .right a:hover {
+    background-color: rgb(27, 135, 244);
+    color: white;
+  }
+  .navbar .right a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    text-align: center;
+    border-bottom: 1px solid rgba(88, 82, 88, 0.667);
+    padding: 3%;
+    background-color: rgb(146, 192, 239);
+  }
+  .menu {
+    display: block;
+  }
+  .menuImg {
+    content: url("images/asset\ 27.svg");
+  } */
+  .profile .img img {
+    height: 300px;
+    width: 300px;
+  }
+  .profile {
+    background: linear-gradient(#5c7bcb, #f2d2e7);
+  }
+  .navbar .right.show {
+    display: block;
+    top: 60px;
+    background-color: rgb(239, 235, 250);
+  }
+  .navbar {
+    height: 60px;
+  }
+  .profile .div2 h1 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .profile {
+    top: 60px;
+  }
+  .profile .resume {
+    margin: 0 15%;
+  }
+  .profile .div2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about :first-child {
+    margin-top: 0;
+  }
+  .about .para p {
+    opacity: 0.6;
+    line-height: 1.8rem;
+  }
+  .skills {
+    gap: 50px;
+    padding: 5% 0;
+  }
+  .skillFlex {
+    gap: 30px;
+  }
+  .skills .skillFlex img {
+    height: 60px;
+  }
+  .projects {
+    height: 100vh;
+  }
+  .flip-card {
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+  }
+  .connect {
+    margin-top: 40rem;
+  }
+  .contact .contactDetail table th,
+  .contact .contactDetail table td {
+    width: 18rem;
+    height: 5vh;
+    text-align: center;
+  }
+  footer {
+    letter-spacing: normal;
+  }
+  footer span {
+    letter-spacing: normal;
+  }
+  .education {
+    height: 130vh;
+  }
+  .education .educationsteps div {
+    width: 70vw;
+    text-align: center;
+    height: 35vh;
+    background-color: #9ccff0;
+    /* padding: 10%; */
+  }
+  .education .educationsteps img {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .profile .img img {
+    height: 250px;
+    width: 250px;
+  }
+  .projects {
+    height: 100vh;
+
+    .flip-card {
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+    }
+  }
+
+  table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  table th,
+  table td {
+    width: 80vw;
+  }
+  table th {
+    color: white;
+    background-color: rgb(118, 17, 219);
+  }
+  table td {
+    background-color: lightblue;
+  }
+  .connect {
+    margin-top: 50rem;
+  }
+}

@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --para: "Poppins", sans-serif;
+  --primaryColor: #7146f7;
+  --secondaryColor: #ccdbfd;
+  --heading: "Bricolage Grotesque", sans-serif;
+}
+.main {
+  height: 100vh;
+}
+.navbar {
+  display: flex;
+  height: 100px;
+  background-color: var(--primaryColor);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+  position: fixed; /* Add this line to make the navbar fixed */
+  width: 100%; /* Add this line to ensure full width */
+  top: 0; /* Add this line to position the navbar at the top */
+  z-index: 1000; /* Add this line to make sure the navbar is above other elements */
+}
+
+.navbar .left h1 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: white;
+}
+
+.navbar .right {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .right a {
+  text-decoration: none;
+  color: black;
+  color: white;
+  font-family: var(--heading);
+  transition: all 0.3s;
+}
+.navbar .right a:hover {
+  color: black;
+}
+.menu {
+  cursor: pointer;
+  display: none;
+}
+
+/* -------------------profile  */
+.profile {
+  top: 100px;
+  height: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  /* background-color: rgb(196, 199, 235); */
+  background: linear-gradient(180deg, #737dfe, #f2d2e7);
+}
+
+.profile .img img {
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+}
+.profile .div2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* background-color: red; */
+}
+.profile .div2 h1 {
+  font-family: var(--para);
+  opacity: 0.8;
+  /* font-weight: 500; */
+}
+.profile .div2 h1 img {
+  height: 30px;
+}
+.profile .div2 h1 span {
+  /* color: rgb(161, 81, 236); */
+  color: rgb(209, 225, 237);
+  color: white;
+  text-shadow: 0.5px 1px 5px black;
+  font-weight: bold;
+}
+
+.profile .resume a {
+  text-decoration: none;
+  /* color: black; */
+  color: white;
+  font-weight: bold;
+  font-family: var(--para);
+  border-radius: 5px;
+  padding: 1% 2%;
+  margin-right: 10px;
+  transition: all 0.3s;
+  background-color: var(--primaryColor);
+}
+.profile .resume a:hover {
+  color: black;
+  background-color: rgb(213, 214, 242);
+}
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.socialLinks img {
+  height: 30px;
+}
+
+.socialLinks .img1:hover {
+  content: url("images/facebook.png");
+}
+.socialLinks .img2:hover {
+  content: url("images/instagram.png");
+}
+.socialLinks .img3:hover {
+  content: url("images/linkedin.png");
+}
+.socialLinks .img4:hover {
+  content: url("images/github.png");
+}
+
+.profile .div2 h1 img {
+  animation: rotateAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+/* ----------------------About  */
+
+.about {
+  margin-top: 100px;
+  height: 60vh;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2%;
+}
+
+.about .para {
+  /* background-color: red; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.about .para p {
+  font-family: var(--para);
+  font-weight: 700;
+  line-height: 2rem;
+  opacity: 0.9;
+}
+.about h1 {
+  font-family: var(--heading);
+  font-weight: 500;
+  text-align: center;
+}
+
+.about .personalDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about .personalDetail h3 {
+  font-family: var(--para) !important;
+}
+
+table td,
+th {
+  background-color: rgb(159, 179, 232);
+  width: 15rem;
+  padding: 1% 0;
+  text-align: center;
+  font-family: var(--para);
+}
+
+/* ---------------skills */
+
+.skills {
+  background-color: rgb(191, 210, 241);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 2%;
+  align-items: center;
+}
+.skillFlex {
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: red; */
+  justify-content: center;
+  width: 40%;
+  gap: 50px;
+  margin: 0 auto;
+}
+
+.skills .skillFlex img {
+  height: 100px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  padding: 2%;
+  background-color: rgb(229, 226, 234);
+}
+
+.skills h1 {
+  font-family: var(--heading);
+  font-weight: 500;
+}
+
+/* ------------projects  */
+
+.projects {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  align-items: center;
+  padding: 2%;
+}
+.projects .head h1 {
+  font-family: var(--heading);
+  font-weight: 500;
+}
+.projects .myProjects {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding: 2%;
+}
+.projects .project {
+}
+
+.flip-card {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #9ccff0;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.flip-card-back h1 {
+  font-family: var(--heading);
+  font-weight: 500;
+}
+.flip-card-back a {
+  font-family: var(--para);
+  text-decoration: none;
+  color: black;
+  background-color: rgb(186, 197, 233);
+  width: 50%;
+  border-radius: 10px;
+}
+.flip-card-back a:hover {
+  background-color: rgb(103, 132, 227);
+}
+
+iframe {
+  box-shadow: 1px 1px 5px 2px rgb(141, 117, 117);
+  height: 100%;
+}
+
+/* ---------------contact */
+.connect {
+  height: 70vh;
+  /* background-color: #2980b9; */
+  background-color: lavender;
+  background-color: rgb(191, 210, 241);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.connect div h1 {
+  font-family: var(--heading);
+  font-weight: 500;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.contact .contactDetail table th,
+.contact .contactDetail table td {
+  width: 20rem;
+  height: 10vh;
+}
+.contact .contactDetail table th {
+  background-color: #156ea9;
+  color: white;
+}
+.contact .contactDetail table td {
+  text-align: left;
+  background-color: rgb(210, 228, 250);
+}
+
+footer {
+  height: 50px;
+  color: white;
+  background-color: rgb(8, 21, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--heading);
+  letter-spacing: 1rem;
+}
+footer span {
+  letter-spacing: 0.5rem;
+}
+
+/* ------------------education */
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #deecf6;
+  padding: 2%;
+}
+.education .head h1 {
+  font-family: var(--heading);
+  font-weight: 500;
+}
+.education .educationsteps img {
+  height: 150px;
+}
+
+.education .educationsteps {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  gap: 5%;
+}
+.education .educationsteps div {
+  width: 25vw;
+  height: 50vh;
+  background-color: #9ccff0;
+  /* padding: 10%; */
+}
+.education .educationsteps div h4.h5 {
+  width: 100%;
+}
+.education .educationsteps .edu {
+  /* border: 1px solid black; */
+  border: none;
+  box-shadow: 1px 1px 10px rgb(24, 16, 16);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.education .educationsteps .edu p {
+  /* background-color: #1db655; */
+  background-color: var(--primaryColor);
+  border: none;
+  padding: 0 10%;
+  border-radius: 5px;
+  color: white;
+}
+.education .educationsteps div h3,
+h4,
+h5,
+p {
+  font-family: "Catamaran", sans-serif;
+}
+
+/* -------------------------------- */
+
+/* this is starting loader  */
+
+.loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(168, 224, 235);
+  position: fixed;
+  z-index: 99;
+}
+
+.main2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(201, 133, 237);
+}
+
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 10px;
+  position: fixed;
+  z-index: 99;
+  /* background-color: rgb(90, 65, 228); */
+  background-color: var(--primaryColor);
+}
+
+.load .circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* make diff */
+.navbar .right .over {
+  /* color: black; */
+  border-bottom: 2px solid white;
+  /* position: relative; */
+}
